@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tax Calculator</h1>
+    <form id="tax-form">
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <select id="age" name="age" required>
+          <option value="">Select Age</option>
+          <option value="under-40">Under 40</option>
+          <option value="40-60">40 to 60</option>
+          <option value="over-60">60 and above</option>
+        </select>
+        <span class="error-icon" id="age-error" title="Please select your age"></span>
+      </div>
+      <div class="form-group">
+        <label for="gross-income">Gross Annual Income:</label>
+        <div class="input-group">
+          <input type="number" id="gross-income" name="gross-income" required>
+          <span class="error-icon" id="gross-income-error" title="Please enter a valid number"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="extra-income">Extra Income:</label>
+        <div class="input-group">
+          <input type="number" id="extra-income" name="extra-income" required>
+          <span class="error-icon" id="extra-income-error" title="Please enter a valid number"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="deductions">Deductions:</label>
+        <div class="input-group">
+          <input type="number" id="deductions" name="deductions" required>
+          <span class="error-icon" id="deductions-error" title="Please enter a valid number"></span>
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label for="age">Age:</label>
+        <select id="age" name="age" required>
+          <option value="">Select Age</option>
+          <option value="under-40">Under 40</option>
+          <option value="40-60">40 to 60</option>
+          <option value="over-60">60 and above</option>
+        </select>
+        <span class="error-icon" id="age-error" title="Please select your age"></span>
+      </div> -->
+      <button type="submit" class="btn">Calculate Tax</button>
+    </form>
+  </div>
+
+  <div id="tax-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Tax Calculation</h2>
+      <p>Your calculated tax is: <span id="tax-amount"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
